@@ -6,3 +6,4 @@ export const index = () => {
    <Hospital/>
   )
 }
+export default index

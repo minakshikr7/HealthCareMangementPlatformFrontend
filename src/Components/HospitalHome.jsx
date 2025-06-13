@@ -17,23 +17,16 @@ export default function HospitalManagement() {
     equipments: [],
     facilities: []
   });
- const [hospitalDataMain, sethospitalDataMain] = useState();
   
 
   useEffect(() => {
     const name = localStorage.getItem("HName");
-    const hospital = JSON.parse(localStorage.getItem("hospitalUser"));
-console.log(hospital.hospitalName +"Sdfasd"); // or ._id, .contactNumber, etc.
-sethospitalDataMain(hospital)
 
 
 
 
-  if (!name || !hospital.hospitalName) {
+  if (!name ) {
     router.push("/hregistration"); // Redirect to the registration page
-  }else{
-    setDepartments(hospital.departments)
-
   }
 }, []);
 
