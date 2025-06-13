@@ -1,7 +1,8 @@
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Enables static HTML export
-  trailingSlash: true
+  trailingSlash: true, // optional, only if you want trailing slashes
+  // DO NOT add `output: 'export'` here
 };
-
 export default nextConfig;
