@@ -107,7 +107,7 @@ export default function HospitalManagement() {
     setLoading(true);
     try {
       const id = localStorage.getItem("id");
-      const response = await axios.get(`https://healthcaremangementplatformbackend.onrender.com//hospitals/${id}/departments`);
+      const response = await axios.get(`https://healthcaremangementplatformbackend.onrender.com/hospitals/${id}/departments`);
      
       setDepartments(response.data);
     } catch (err) {
