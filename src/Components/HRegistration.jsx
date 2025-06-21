@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 
@@ -12,7 +12,15 @@ const HRegistration = () => {
     password: ""
   });
 
+
   const router = useRouter();
+    useEffect(() => {
+      const name = localStorage.getItem("HName");
+  
+    if (name ) {
+      router.push("/hospitalhome"); // Redirect to the registration page
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,6 +51,7 @@ const HRegistration = () => {
   }    
   return (
     <div className="flex justify-center items-center min-h-screen">
+      
       <div className="max-w-lg w-full p-6 bg-white shadow-lg rounded-lg border border-gray-200">
         <h2 className="text-2xl font-semibold text-center text-blue-600 mb-4">Hospital Registration</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>

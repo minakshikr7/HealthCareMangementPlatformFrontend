@@ -19,16 +19,7 @@ export default function HospitalManagement() {
   });
   
 
-  useEffect(() => {
-    const name = localStorage.getItem("HName");
-
-
-
-
-  if (!name ) {
-    router.push("/hregistration"); // Redirect to the registration page
-  }
-}, []);
+  
 
 
 

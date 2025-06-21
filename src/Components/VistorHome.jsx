@@ -31,14 +31,7 @@ const VisitorHome = () => {
   // State for search inputs
   const router = useRouter();
 
- 
-  useEffect(() => {
-    const name = localStorage.getItem("VName");
-    console.log(name+"hi")
-    if (!name) {
-      router.push("/vregister"); // Redirect to the registration page
-    }
-  }, []);
+
 
   const [location, setLocation] = useState('');
   const [state, setState] = useState('');

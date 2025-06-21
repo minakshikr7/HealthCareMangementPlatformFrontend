@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 
@@ -14,6 +14,14 @@ const VRegistration = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+   
+    useEffect(() => {
+      const name = localStorage.getItem("VName");
+      console.log(name+"hi")
+      if (name) {
+        router.push("/vregister"); // Redirect to the registration page
+      }
+    }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

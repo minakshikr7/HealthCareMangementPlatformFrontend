@@ -11,11 +11,11 @@ export default function Home() {
 
 
   const navigateToHospitalManagement = () => {
-    router.push('/hospitalhome');
+    router.push('/hregistration');
   };
 
   const navigateToEmergency = () => {
-    router.push('/visitorhome');
+    router.push('/vregister');
   };
 
   const toggleMenu = () => {
